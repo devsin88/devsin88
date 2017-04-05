@@ -16,8 +16,18 @@ public class MemberDAO {
 	 * @param String
 	 * @return MemberVO
 	 */
-	public MemberVO searchId(String id){
-		return template.selectOne("member.searchId");
+	public MemberVO searchId(String mem_id){
+		return template.selectOne("member.searchId", mem_id);
+	}
+	
+	/**
+	 * 이메일 중복 검사
+	 * 
+	 * @param String
+	 * @return MemberVO
+	 */
+	public MemberVO searchEmail(String mem_email){
+		return template.selectOne("member.searchEmail", mem_email);
 	}
 	
 	/**
@@ -27,6 +37,14 @@ public class MemberDAO {
 	 * @return boolean
 	 */
 	public boolean addUser(MemberVO vo){
-		return template.insert("member.addUser", vo) > 0 ? true : false;
+		boolean isSucc = false;
+		
+		try {
+			isSucc = template.insert("member.addUser", vo) > 0 ? true : false;
+		} catch (Exception e) {
+			return false;
+		}
+		
+		return isSucc;
 	}
 }

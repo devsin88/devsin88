@@ -10,8 +10,6 @@
 	<head>
 		<meta charset="utf-8">
 		<title>The Project | Home Education</title>
-		<meta name="description" content="The Project a Bootstrap-based, Responsive HTML5 Template">
-		<meta name="author" content="htmlcoder.me">
 
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -163,6 +161,114 @@
 			<!-- banner end -->
 
 			<div id="page-start"></div>
+			
+			<!-- 작업내역 section start -->
+			<!-- ================ -->
+			<section class="section clearfix">
+			
+				<table class="table">
+					<colgroup>
+						<col width="10%" />
+						<col width="20%" />
+						<col width="70%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>제목</th>
+							<th>내용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>서버</td>
+							<td>AWS EC2</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>DB</td>
+							<td>MySql</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>서버구축</td>
+							<td>docker</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>사용언어</td>
+							<td>java, spring, ajax, jquery, servlet/jsp, mybatis </td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<br/><br/>
+				
+				<table class="table">
+					<colgroup>
+						<col width="10%" />
+						<col width="20%" />
+						<col width="60%" />
+						<col width="10%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>제목</th>
+							<th>내용</th>
+							<th>진행</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>로그인</td>
+							<td>회원가입, 로그인, 비밀번호 SHA-256 암호화</td>
+							<td>완료</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>게시판 목록</td>
+							<td>메인 목록, 서브목록 DB 로 저장, 최초 접속시 DB에서 읽어와서 메뉴 목록 구성</td>
+							<td>완료</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>메뉴 클릭시 게시판 내용 출력</td>
+							<td>게시판 DB 작업, 게시판 내용 읽어서 뿌려줄 화면, Paging Util 처리</td>
+							<td>진행 예정</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td>게시글 작성</td>
+							<td>일반 게시판 작성 (summernote), 소스코드 작성 (CodeMirror), 파일업로드 가능 작업 </td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>포트폴리오 게시판</td>
+							<td>포트폴리오 게시판 작업 </td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>세부페이지 작업</td>
+							<td>푸터 사이트맵 정리, 회원정보 수정, 홈화면 정리.. </td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td>관리자홈페이지 만들기...</td>
+							<td>홈페이지 메뉴 추가 수정 삭제 가능.. 회원 관리 가능한 홈페이지 만들기</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</section>
+			<!-- 작업내역 section end -->
 
 			<!-- section start -->
 			<!-- ================ -->

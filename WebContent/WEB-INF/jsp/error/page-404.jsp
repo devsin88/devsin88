@@ -9,10 +9,8 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>The Project | Page Login</title>
-		<meta name="description" content="The Project a Bootstrap-based, Responsive HTML5 Template">
-		<meta name="author" content="htmlcoder.me">
-
+		<title>The Project | Page 404</title>
+		
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -77,7 +75,7 @@
 		<div class="page-wrapper">
 		
 			<%-- Header --%>
-			<%@include file="header.jsp" %>
+			<%@include file="../main/header.jsp" %>
 			<%-- /Header --%>
 		
 			<!-- breadcrumb start -->
@@ -85,8 +83,8 @@
 			<div class="breadcrumb-container">
 				<div class="container">
 					<ol class="breadcrumb">
-						<li><i class="fa fa-home pr-10"></i><a href="index.sin">Home</a></li>
-						<li class="active">Page Login</li>
+						<li><i class="fa fa-home pr-10"></i><a href="index.html">Home</a></li>
+						<li class="active">Page 404</li>
 					</ol>
 				</div>
 			</div>
@@ -94,57 +92,30 @@
 
 			<!-- main-container start -->
 			<!-- ================ -->
-			<div class="main-container dark-translucent-bg" style="background-image:url('images/background-img-6.jpg');">
+			<section class="main-container jumbotron light-gray-bg text-center margin-clear">
+
 				<div class="container">
 					<div class="row">
+
 						<!-- main start -->
 						<!-- ================ -->
-						<div class="main object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="100">
-							<div class="form-block center-block p-30 light-gray-bg border-clear">
-								<h2 class="title">Login</h2>
-								<form class="form-horizontal" action="login.sin" method="post">
-									<div class="form-group has-feedback">
-										<label for="mem_id" class="col-sm-3 control-label">User Name</label>
-										<div class="col-sm-8">
-											<input type="text" class="form-control" id="mem_id" name="mem_id" placeholder="User Name" required>
-											<i class="fa fa-user form-control-feedback"></i>
-										</div>
-									</div>
-									<div class="form-group has-feedback">
-										<label for="mem_pwd" class="col-sm-3 control-label">Password</label>
-										<div class="col-sm-8">
-											<input type="password" class="form-control" id="mem_pwd" name="mem_pwd" placeholder="Password" required>
-											<i class="fa fa-lock form-control-feedback"></i>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-sm-offset-3 col-sm-8">
-											<!-- 
-											<div class="checkbox">
-												<label>
-													<input type="checkbox" required> Remember me.
-												</label>
-											</div>
-											 -->											
-											<button type="submit" class="btn btn-group btn-default btn-animated">Log In <i class="fa fa-user"></i></button>
-											<ul class="space-top">
-												<li><a href="#">Forgot your password?</a></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-							</div>
-							<p class="text-center space-top">Don't have an account yet? <a href="signup.sin">Sing up</a> now.</p>
+						<div class="main col-md-6 col-md-offset-3 pv-40">
+							<h1 class="page-title"><span class="text-default">404</span></h1>
+							<h2>Ooops! Page Not Found</h2>
+							<p>The requested URL was not found on this server. Make sure that the Web site address displayed in the address bar of your browser is spelled and formatted correctly.</p>
+							
+							<a href="index.sin" class="btn btn-default btn-animated btn-lg">Return Home <i class="fa fa-home"></i></a>
 						</div>
 						<!-- main end -->
+
 					</div>
 				</div>
-			</div>
+			</section>
 			<!-- main-container end -->
-
+			
 			<%-- footer --%>
-			<%@include file="footer.jsp" %>
-			<%-- /footer --%>
+			<%@include file="../main/footer.jsp" %>
+			<%-- /footer --%>		
 			
 		</div>
 		<!-- page-wrapper end -->
@@ -156,6 +127,10 @@
 		<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 		<!-- Modernizr javascript -->
 		<script type="text/javascript" src="assets/plugins/modernizr.js"></script>
+		<script type="text/javascript" src="assets/plugins/rs-plugin-5/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+		<script type="text/javascript" src="assets/plugins/rs-plugin-5/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+		<!-- Isotope javascript -->
+		<script type="text/javascript" src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
 		<!-- Magnific Popup javascript -->
 		<script type="text/javascript" src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 		<!-- Appear javascript -->
@@ -166,8 +141,15 @@
 		<script src="assets/plugins/jquery.parallax-1.1.3.js"></script>
 		<!-- Contact form -->
 		<script src="assets/plugins/jquery.validate.js"></script>
+		<!-- Google Maps javascript -->
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=your_google_map_key"></script>
+		<script type="text/javascript" src="assets/js/google.map.config.js"></script>
+		<!-- Background Video -->
+		<script src="assets/plugins/vide/jquery.vide.js"></script>
 		<!-- Owl carousel javascript -->
 		<script type="text/javascript" src="assets/plugins/owlcarousel2/owl.carousel.min.js"></script>
+		<!-- Pace javascript -->
+		<script type="text/javascript" src="assets/plugins/pace/pace.min.js"></script>
 		<!-- SmoothScroll javascript -->
 		<script type="text/javascript" src="assets/plugins/jquery.browser.js"></script>
 		<script type="text/javascript" src="assets/plugins/SmoothScroll.js"></script>

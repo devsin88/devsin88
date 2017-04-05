@@ -12,11 +12,9 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<context:annotation-config/>
 
-	<context:component-scan base-package="spring.service"/>
-
-	<!-- 이메일 관련 -->
+	<!-- 이메일 관련 < 추가 예정 > -->
 	
-	
+	<!-- 파일 업로드 -->
 	<bean id="multipartResolver"
 	class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="defaultEncoding" 
@@ -24,13 +22,13 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 		<property name="maxUploadSize" value="-1"/>
 	</bean>
 	
-	<!-- 빈 객체들 -->
-	<bean id="main" class="spring.control.MainController"/>
-	
 	<!-- view Resolver선언 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>
+	
+	<context:component-scan base-package="spring.service"/>
+	<context:component-scan base-package="spring.control"/>
 	
 </beans>

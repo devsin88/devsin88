@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="menu">
+
+	<resultMap type="mybatis.vo.MenuVO" id="s_menu">
+		<id column="menu_no" property="menu_no"/>
+		<collection property="sm_list" ofType="mybatis.vo.SubMenuVO" select="selectSubMenu" column="menu_no"/>
+		<!-- <association property="subMenuVOs" javaType="mybatis.vo.SubMenuVO" select="selectSubMenu" column="menu_no"/> -->
+	</resultMap>
+
+	<!-- 메뉴 가져오기 -->
+	<select id="selectMenu" resultMap="s_menu">
+		select * from menu_t
+		order by menu_no asc
+	</select>
+	
+	<!-- 서브 메뉴 가져오기 -->
+	<select id="selectSubMenu" resultType="mybatis.vo.SubMenuVO" parameterType="int">
+		select * from submenu_t
+		where menu_no = #{menu_no}
+	</select>
+	
+</mapper>

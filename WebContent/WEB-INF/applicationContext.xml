@@ -48,5 +48,6 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 	</bean>
 
 	<bean id="memberDao" class="mybatis.dao.MemberDAO"></bean>
+	<bean id="menuDao" class="mybatis.dao.MenuDAO"></bean>
 
 </beans>

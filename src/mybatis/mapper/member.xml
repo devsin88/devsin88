@@ -8,17 +8,20 @@
 
 	<!-- 회원가입 -->
 	<insert id="addUser" parameterType="mybatis.vo.MemberVO">
-		insert into member(id, pwd, p_key, email)
-		values (#{id}, #{pwd}, #{p_key}, #{email})
+		insert into member_t(mem_no, mem_id, mem_pwd, mem_key, mem_email)
+		values (nextval('seq_mem'), #{mem_id}, #{mem_pwd}, #{mem_key}, #{mem_email})
 	</insert>
 	
 	<!-- 아이디 조회 -->
 	<select id="searchId" resultType="mybatis.vo.MemberVO" parameterType="String">
-		select * from member
-		where id=#{id}
+		select * from member_t
+		where mem_id=#{mem_id}
 	</select>
-  
-  
-  
+	
+	<!-- 이메일 조회 -->
+	<select id="searchEmail" resultType="mybatis.vo.MemberVO" parameterType="String">
+		select * from member_t
+		where mem_email=#{mem_email}
+	</select>
 
 </mapper>
