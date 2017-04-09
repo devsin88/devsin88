@@ -1,8 +1,10 @@
 package mybatis.vo;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class MenuVO {
+public class MenuVO implements Serializable{
+
 	private int menu_no;
 	private String menu_title;
 	

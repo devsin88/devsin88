@@ -197,9 +197,18 @@
 						</tr>
 						<tr>
 							<td>4</td>
+							<td>was</td>
+							<td>apache, tomcat</td>
+						</tr>
+						<tr>
+							<td>5</td>
 							<td>사용언어</td>
 							<td>java, spring, ajax, jquery, servlet/jsp, mybatis </td>
-							<td></td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td>버전관리</td>
+							<td>gitlab</td>
 						</tr>
 					</tbody>
 				</table>
@@ -574,9 +583,6 @@
 		<script src="assets/plugins/jquery.parallax-1.1.3.js"></script>
 		<!-- Contact form -->
 		<script src="assets/plugins/jquery.validate.js"></script>
-		<!-- Google Maps javascript -->
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=your_google_map_key"></script>
-		<script type="text/javascript" src="assets/js/google.map.config.js"></script>
 		<!-- Background Video -->
 		<script src="assets/plugins/vide/jquery.vide.js"></script>
 		<!-- Owl carousel javascript -->

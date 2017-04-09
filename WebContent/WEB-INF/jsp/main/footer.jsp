@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!-- footer start (Add "dark" class to #footer in order to enable dark footer) -->
 <!-- ================ -->
-<footer id="footer" class="clearfix ">
+<footer id="footer" class="clearfix">
 
 	<!-- .footer start -->
 	<!-- ================ -->
@@ -10,92 +10,42 @@
 		<div class="container">
 			<div class="footer-inner">
 				<div class="row">
-					<div class="col-md-3">
-						<div class="footer-content">
-							<h2 class="title logo-font text-default">The College</h2>
-							<div class="separator-2"></div>
-							<nav class="mb-20">
-								<ul class="nav nav-pills nav-stacked list-style-icons">
-									<li><a href="components-social-icons.html"><i class="fa fa-chevron-circle-right"></i> Lorem ipsum dolor sit</a></li>
-									<li><a href="components-buttons.html"><i class="fa fa-chevron-circle-right"></i>  Consectetur adipisicing elit</a></li>
-									<li><a href="components-buttons.html"><i class="fa fa-chevron-circle-right"></i> Rerum iure temporibus</a></li>
-								</ul>
-							</nav>
-							<h4 class="title text-default"><i class="fa fa-wechat pr-10"></i> Consectetur adipisicing</h4>
-							<nav class="mb-20">
-								<ul class="nav nav-pills nav-stacked list-style-icons">
-									<li><a href="components-forms.html"><i class="fa fa-chevron-circle-right"></i> Repudiandae porro doloribus</a></li>
-									<li><a href="components-tabs-and-pills.html"><i class="fa fa-chevron-circle-right"></i> Amet culpa</a></li>
-									<li><a target="_blank" href="http://htmlcoder.me/support"><i class="fa fa-chevron-circle-right"></i> Atque vero laudantium</a></li>
-									<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Loat dolot aspree</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="footer-content">
-							<h4 class="title text-default"><i class="fa fa-search pr-10"></i> Resources</h4>
-							<nav class="mb-20">
-								<ul class="nav nav-pills nav-stacked list-style-icons">
-									<li><a href="components-social-icons.html"><i class="fa fa-chevron-circle-right"></i> Vel consequatur</a></li>
-									<li><a href="components-buttons.html"><i class="fa fa-chevron-circle-right"></i> Provident obcaecati</a></li>
-									<li><a href="components-buttons.html"><i class="fa fa-chevron-circle-right"></i> Illo perspiciatis</a></li>
-									<li><a href="components-forms.html"><i class="fa fa-chevron-circle-right"></i> acilis maiores</a></li>
-									<li><a href="components-tabs-and-pills.html"><i class="fa fa-chevron-circle-right"></i> Enim modi</a></li>
-								</ul>
-							</nav>
-							<h4 class="title text-default"><i class="fa fa-users pr-10"></i> Staff/Faculty</h4>
-							<nav class="mb-20">
-								<ul class="nav nav-pills nav-stacked list-style-icons">
-									<li><a href="components-forms.html"><i class="fa fa-chevron-circle-right"></i> acilis maiores</a></li>
-									<li><a href="components-tabs-and-pills.html"><i class="fa fa-chevron-circle-right"></i> Enim modi</a></li>
-									<li><a target="_blank" href="http://htmlcoder.me/support"><i class="fa fa-chevron-circle-right"></i> Support</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="footer-content">
-							<h4 class="title text-default"><i class="fa fa-file-text-o pr-10"></i> Admission</h4>
-							<nav class="mb-20">
-								<ul class="nav nav-pills nav-stacked list-style-icons">
-									<li><a href="components-forms.html"><i class="fa fa-chevron-circle-right"></i> Facilis maiores</a></li>
-									<li><a href="components-buttons.html"><i class="fa fa-chevron-circle-right"></i> Provident obcaecati</a></li>
-									<li><a href="components-social-icons.html"><i class="fa fa-chevron-circle-right"></i> Vel consequatur</a></li>
-									<li><a target="_blank" href="http://htmlcoder.me/support"><i class="fa fa-chevron-circle-right"></i> Support</a></li>
-								</ul>
-							</nav>
-							<h4 class="title text-default"><i class="fa fa-child pr-10"></i> Students</h4>
-							<nav class="mb-20">
-								<ul class="nav nav-pills nav-stacked list-style-icons">
-									<li><a href="components-buttons.html"><i class="fa fa-chevron-circle-right"></i> Illo perspiciatis</a></li>
-									<li><a href="components-tabs-and-pills.html"><i class="fa fa-chevron-circle-right"></i> Enim modi</a></li>
-									<li><a href="#"><i class="fa fa-chevron-circle-right"></i> Privacy</a></li>
-									<li><a href="components-social-icons.html"><i class="fa fa-chevron-circle-right"></i> Vel consequatur</a></li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<div class="footer-content">
-							<h4 class="title text-default"><i class="fa fa-institution pr-10"></i> Schools</h4>
-							<nav class="mb-20">
-								<ul class="nav nav-pills nav-stacked list-style-icons">
-									<li><a href="components-buttons.html"><i class="fa fa-chevron-circle-right"></i> Consectetur adipisicing elit</a></li>
-									<li><a href="components-social-icons.html"><i class="fa fa-chevron-circle-right"></i> Lorem ipsum dolor sit</a></li>
-									<li><a href="components-tabs-and-pills.html"><i class="fa fa-chevron-circle-right"></i> Amet culpa</a></li>
-									<li><a href="components-forms.html"><i class="fa fa-chevron-circle-right"></i> Repudiandae porro doloribus</a></li>
-									<li><a href="components-buttons.html"><i class="fa fa-chevron-circle-right"></i> Rerum iure temporibus</a></li>
-									<li><a target="_blank" href="http://htmlcoder.me/support"><i class="fa fa-chevron-circle-right"></i> Atque vero laudantium</a></li>
-								</ul>
-							</nav>
-							<h4 class="title text-default"><i class="fa fa-info-circle pr-10"></i> Information</h4>
-							<nav class="mb-20">
-								<ul class="nav nav-pills nav-stacked list-style-icons">
-									<li><a href="components-buttons.html"><i class="fa fa-chevron-circle-right"></i> Consectetur adipisicing elit</a></li>
-									<li><a href="components-social-icons.html"><i class="fa fa-chevron-circle-right"></i> Lorem ipsum dolor sit</a></li>
-								</ul>
-							</nav>
+					<div class="col-md-6 col-md-offset-3">
+						<div class="footer-content text-center padding-ver-clear">
+							<div class="logo-footer">
+								<img id="logo-footer" class="center-block"
+									src="assets/images/logo_cool_green.png" alt="">
+							</div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Necessitatibus illo vel dolorum soluta consectetur doloribus
+								sit. Delectus non tenetur odit dicta vitae debitis suscipit
+								doloribus. Lorem ipsum dolor sit amet, illo vel dolorum soluta
+								consectetur.</p>
+							<ul class="list-inline mb-20">
+								<li><i class="text-default fa fa-map-marker pr-5"></i>One
+									infinity loop, 54100</li>
+								<li><a href="tel:+00 1234567890" class="link-dark"><i
+										class="text-default fa fa-phone pl-10 pr-5"></i>+00 1234567890</a></li>
+								<li><a href="mailto:info@theproject.com" class="link-dark"><i
+										class="text-default fa fa-envelope-o pl-10 pr-5"></i>info@theproject.com</a></li>
+							</ul>
+							<ul class="social-links circle animated-effect-1 margin-clear">
+								<li class="facebook"><a target="_blank"
+									href="http://www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+								<li class="twitter"><a target="_blank"
+									href="http://www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+								<li class="googleplus"><a target="_blank"
+									href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+								<li class="linkedin"><a target="_blank"
+									href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+								<li class="xing"><a target="_blank"
+									href="http://www.xing.com"><i class="fa fa-xing"></i></a></li>
+							</ul>
+							<div class="separator"></div>
+							<p class="text-center margin-clear">
+								Copyright © 2017 The Project by <a target="_blank"
+									href="http://htmlcoder.me">HtmlCoder</a>. All Rights Reserved
+							</p>
 						</div>
 					</div>
 				</div>
@@ -103,21 +53,6 @@
 		</div>
 	</div>
 	<!-- .footer end -->
-
-	<!-- .subfooter start -->
-	<!-- ================ -->
-	<div class="subfooter default-bg">
-		<div class="container">
-			<div class="subfooter-inner">
-				<div class="row">
-					<div class="col-md-12">
-						<p class="text-center"><span class="logo-font pr-10">The College</span> Copyright © 2017 The Project by <a class="link-light" target="_blank" href="http://htmlcoder.me">HtmlCoder</a>. All Rights Reserved</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- .subfooter end -->
 
 </footer>
 <!-- footer end -->

@@ -1,6 +1,8 @@
 package mybatis.vo;
 
-public class SubMenuVO {
+import java.io.Serializable;
+
+public class SubMenuVO implements Serializable {
 	
 	private int sub_no, menu_no;
 	private String sub_title;

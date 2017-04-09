@@ -141,10 +141,10 @@
 									<ul class="nav navbar-nav ">
 
 										<!-- mega-menu start -->
-										<c:if test="${title==null || title=='home' }">
+										<c:if test="${menu_no==null}">
 										<li class="active">
 										</c:if>
-										<c:if test="${title!=null && title !='home' }">
+										<c:if test="${menu_no!=null}">
 										<li>
 										</c:if>
 											<a href="index.sin">home</a>
@@ -153,18 +153,18 @@
 										
 										<c:forEach var="mvo" items="${menu }" varStatus="status">
 											<!-- mega-menu start -->
-											<c:if test="${title != mvo.menu_title }">
+											<c:if test="${menu_no != mvo.menu_no }">
 											<li class="dropdown">
 											</c:if>
-											<c:if test="${title == mvo.menu_title }">
+											<c:if test="${menu_no == mvo.menu_no }">
 											<li class="dropdown active">
 											</c:if>
-												<a href="title.sin?title=${mvo.menu_title }" class="dropdown-toggle" data-toggle="dropdown">${mvo.menu_title }</a>
+												<a href="title.sin?menu_no=${mvo.menu_no }" class="dropdown-toggle" data-toggle="dropdown">${mvo.menu_title }</a>
 												<ul class="dropdown-menu">
 													
 													<c:forEach var="svo" items="${mvo.sm_list }">
 														<li>
-															<a href="subtitle.sin?title=${mvo.menu_title }&subtitle=${svo.sub_title }">${svo.sub_title } </a>
+															<a href="subtitle.sin?menu_no=${mvo.menu_no }&sub_no=${svo.sub_no }">${svo.sub_title } </a>
 															<!-- 
 															<ul class="dropdown-menu">
 																<li ><a href="features-headers-default.html">Default/Semi-Transparent</a></li>
@@ -200,3 +200,23 @@
 	<!-- header end -->
 </div>
 <!-- header-container end -->
+
+<c:forEach var="mvo" items="${menu }" varStatus="status">
+	<c:if test="${mvo.menu_no == requestScope.menu_no }">
+		<!-- breadcrumb start -->
+		<!-- ================ -->
+		<div class="breadcrumb-container">
+			<div class="container">
+				<ol class="breadcrumb">
+					<li><i class="fa fa-home pr-10"></i><a href="title.sin?menu_no=${mvo.menu_no }">${mvo.menu_title }</a></li>
+					<c:forEach var="svo" items="${mvo.sm_list }">
+						<c:if test="${svo.sub_no == requestScope.sub_no }">
+							<li class="active">${svo.sub_title }</li>
+						</c:if>
+					</c:forEach>
+				</ol>
+			</div>
+		</div>
+		<!-- breadcrumb end -->
+	</c:if>
+</c:forEach>

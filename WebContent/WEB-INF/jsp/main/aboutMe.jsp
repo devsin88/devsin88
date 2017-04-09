@@ -300,9 +300,6 @@
 		<script src="assets/plugins/jquery.parallax-1.1.3.js"></script>
 		<!-- Contact form -->
 		<script src="assets/plugins/jquery.validate.js"></script>
-		<!-- Google Maps javascript -->
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=your_google_map_key"></script>
-		<script type="text/javascript" src="assets/js/google.map.config.js"></script>
 		<!-- Background Video -->
 		<script src="assets/plugins/vide/jquery.vide.js"></script>
 		<!-- Owl carousel javascript -->

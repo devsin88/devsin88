@@ -53,9 +53,6 @@
 		<!-- Color Scheme (In order to change the color scheme, replace the blue.css with the color scheme that you prefer)-->
 		<link href="assets/css/skins/cool_green.css" rel="stylesheet">
 		
-
-		<!-- Custom css --> 
-		<link href="assets/css/custom.css" rel="stylesheet">
 	</head>
 
 	<!-- body classes:  -->
@@ -78,36 +75,32 @@
 			<%@include file="../main/header.jsp" %>
 			<%-- /Header --%>
 		
-			<!-- breadcrumb start -->
-			<!-- ================ -->
-			<div class="breadcrumb-container">
-				<div class="container">
-					<ol class="breadcrumb">
-						<li><i class="fa fa-home pr-10"></i><a href="index.sin">Home</a></li>
-						<li class="active">Page 404</li>
-					</ol>
-				</div>
-			</div>
-			<!-- breadcrumb end -->
-
 			<!-- main-container start -->
 			<!-- ================ -->
 			<section class="main-container jumbotron light-gray-bg text-center margin-clear">
 
 				<div class="container">
 					<div class="row">
-
-						<!-- main start -->
-						<!-- ================ -->
-						<div class="main col-md-6 col-md-offset-3 pv-40">
-							<h1 class="page-title"><span class="text-default">404</span></h1>
-							<h2>Ooops! Page Not Found</h2>
-							<p>The requested URL was not found on this server. Make sure that the Web site address displayed in the address bar of your browser is spelled and formatted correctly.</p>
-							
-							<a href="index.sin" class="btn btn-default btn-animated btn-lg">Return Home <i class="fa fa-home"></i></a>
-						</div>
-						<!-- main end -->
-
+					
+						<c:forEach var="mvo" items="${menu }" varStatus="status">
+							<!-- mega-menu start -->
+							<c:if test="${menu_no == mvo.menu_no }">
+								<c:forEach var="svo" items="${mvo.sm_list }">
+									<div class="call-to-action well">
+										
+										<div class="row">
+											<div class="col-sm-8">
+												<h2 class="title">${svo.sub_title }</h2>
+											</div>
+											<div class="col-sm-4 text-center">
+												<a href="subtitle.sin?menu_no=${mvo.menu_no }&sub_no=${svo.sub_no }" class="btn btn-lg btn-default btn-animated">Learn More<i class="fa fa-arrow-right pl-20"></i></a>
+											</div>
+										</div>
+									</div>
+								</c:forEach>
+							</c:if>
+						</c:forEach>
+					
 					</div>
 				</div>
 			</section>
@@ -141,9 +134,6 @@
 		<script src="assets/plugins/jquery.parallax-1.1.3.js"></script>
 		<!-- Contact form -->
 		<script src="assets/plugins/jquery.validate.js"></script>
-		<!-- Google Maps javascript -->
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=your_google_map_key"></script>
-		<script type="text/javascript" src="assets/js/google.map.config.js"></script>
 		<!-- Background Video -->
 		<script src="assets/plugins/vide/jquery.vide.js"></script>
 		<!-- Owl carousel javascript -->

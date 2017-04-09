@@ -14,6 +14,10 @@
 		<!-- Mobile Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+		<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+		<!-- DataTables -->
+		<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+
 		<!-- Favicon -->
 		<link rel="shortcut icon" href="assets/images/favicon.ico">
 
@@ -54,8 +58,67 @@
 		<link href="assets/css/skins/cool_green.css" rel="stylesheet">
 		
 
-		<!-- Custom css --> 
-		<link href="assets/css/custom.css" rel="stylesheet">
+
+		
+		
+		<script type="text/javascript">
+		
+			$(function(){
+	
+				var datatables = null;
+				
+				if(datatables) datatables.destroy();
+	
+			    datatables = $('#datatables').DataTable({
+			        processing: true
+			        ,serverSide: true
+			        ,retrieve: true
+			        ,stateSave: false
+			        ,paging: true
+			        ,lengthChange: true
+			        ,displayStart: ${start}
+			        ,pageLength: 10
+			        ,aLengthMenu: [[10, 15, 30], [10, 15, 30]]
+			        ,searching: false
+			        ,dom: '<"top"i>rt<"bottom"lp><"clear">'
+			        ,autoWidth: false
+			        ,columnDefs: [
+			            {className: "text-left", targets: [0,1,2,3]},
+			            {orderable: false, targets :[0,1,2,3]}
+			        ]
+			        ,"order" : [[0, "desc"]]
+			        ,ajax: {
+			            url: "paging.sin"
+			            ,type: "POST"
+		            	,data: function(d){
+		                    tmp = new Object;
+		                    tmp.datatables = 1;
+		                    tmp = $.extend(tmp, d);
+		                    return tmp;
+		                }
+			        }
+			        ,columns: [
+			            {"data": "board_no"}
+			            ,{"data": "board_title"}
+			            ,{"data": "mem_id"}
+			            ,{"data": "board_date"}
+			            
+			        ],
+			        initComplete: function () {
+			        	$('#datatables tbody').on('click', 'tr', function () {
+			        		console.log( datatables.row( this ).data() );
+			        		
+			        		var data = datatables.row( this ).data();
+			        		
+			        		location.href = "boardview.sin?munu_no="+${menu_no}+"&sub_no="+${sub_no} + "&board_no="+ data.board_no;
+			        		
+			        		//alert( 'You clicked on '+data.board_no+' row' );
+					    } );
+			        }
+			    });
+			});
+			
+		</script>
 	</head>
 
 	<!-- body classes:  -->
@@ -78,18 +141,6 @@
 			<%@include file="../main/header.jsp" %>
 			<%-- /Header --%>
 		
-			<!-- breadcrumb start -->
-			<!-- ================ -->
-			<div class="breadcrumb-container">
-				<div class="container">
-					<ol class="breadcrumb">
-						<li><i class="fa fa-home pr-10"></i><a href="index.sin">Home</a></li>
-						<li class="active">Page 404</li>
-					</ol>
-				</div>
-			</div>
-			<!-- breadcrumb end -->
-
 			<!-- main-container start -->
 			<!-- ================ -->
 			<section class="main-container jumbotron light-gray-bg text-center margin-clear">
@@ -99,13 +150,23 @@
 
 						<!-- main start -->
 						<!-- ================ -->
-						<div class="main col-md-6 col-md-offset-3 pv-40">
-							<h1 class="page-title"><span class="text-default">404</span></h1>
-							<h2>Ooops! Page Not Found</h2>
-							<p>The requested URL was not found on this server. Make sure that the Web site address displayed in the address bar of your browser is spelled and formatted correctly.</p>
-							
-							<a href="index.sin" class="btn btn-default btn-animated btn-lg">Return Home <i class="fa fa-home"></i></a>
-						</div>
+						<table id="datatables" class="table table-hover">
+							<colgroup>
+								<col width="10%" />
+								<col width="60%" />
+								<col width="10%" />
+								<col width="20%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>제목</th>
+									<th>작성자</th>
+									<th>작성일</th>
+								</tr>
+							</thead>
+
+						</table>
 						<!-- main end -->
 
 					</div>
@@ -141,9 +202,6 @@
 		<script src="assets/plugins/jquery.parallax-1.1.3.js"></script>
 		<!-- Contact form -->
 		<script src="assets/plugins/jquery.validate.js"></script>
-		<!-- Google Maps javascript -->
-		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;key=your_google_map_key"></script>
-		<script type="text/javascript" src="assets/js/google.map.config.js"></script>
 		<!-- Background Video -->
 		<script src="assets/plugins/vide/jquery.vide.js"></script>
 		<!-- Owl carousel javascript -->
@@ -157,6 +215,8 @@
 		<script type="text/javascript" src="assets/js/template.js"></script>
 		<!-- Custom Scripts -->
 		<script type="text/javascript" src="assets/js/custom.js"></script>
+		<!-- DataTables -->
+		<script type="text/javascript" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 
 	</body>
 </html>
