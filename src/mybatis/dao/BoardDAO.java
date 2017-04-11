@@ -29,4 +29,8 @@ public class BoardDAO {
 		
 		return boardDAOs;
 	}
+	
+	public BoardVO getView(int board_vo){
+		return template.selectOne("board.selectOne",board_vo);
+	}
 }

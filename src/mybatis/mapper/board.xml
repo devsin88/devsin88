@@ -21,5 +21,11 @@
 		select count(*) FROM board_t
 		where sub_no=#{sub_no}
 	</select>
+	
+	<!-- 게시글 조회 -->
+	<select id="selectOne" resultType="mybatis.vo.BoardVO" parameterType="int">
+		select * FROM board_t
+		where board_no=#{board_no}
+	</select>
 
 </mapper>

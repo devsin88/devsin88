@@ -68,15 +68,18 @@
 				var datatables = null;
 				
 				if(datatables) datatables.destroy();
+				
+				var tableId = "#"+${menu_no};
+				console.log(tableId);
 	
-			    datatables = $('#datatables').DataTable({
+			    datatables = $(tableId).DataTable({
 			        processing: true
 			        ,serverSide: true
 			        ,retrieve: true
-			        ,stateSave: false
+			        ,stateSave: true
 			        ,paging: true
 			        ,lengthChange: true
-			        ,displayStart: ${start}
+			        //,displayStart: ${start}
 			        ,pageLength: 10
 			        ,aLengthMenu: [[10, 15, 30], [10, 15, 30]]
 			        ,searching: false
@@ -105,12 +108,12 @@
 			            
 			        ],
 			        initComplete: function () {
-			        	$('#datatables tbody').on('click', 'tr', function () {
+			        	$(tableId+' tbody').on('click', 'tr', function () {
 			        		console.log( datatables.row( this ).data() );
 			        		
 			        		var data = datatables.row( this ).data();
 			        		
-			        		location.href = "boardview.sin?munu_no="+${menu_no}+"&sub_no="+${sub_no} + "&board_no="+ data.board_no;
+			        		location.href = "boardview.sin?menu_no="+${menu_no}+"&sub_no="+${sub_no} + "&board_no="+ data.board_no;
 			        		
 			        		//alert( 'You clicked on '+data.board_no+' row' );
 					    } );
@@ -150,11 +153,11 @@
 
 						<!-- main start -->
 						<!-- ================ -->
-						<table id="datatables" class="table table-hover">
+						<table id="${menu_no }" class="table table-hover">
 							<colgroup>
 								<col width="10%" />
-								<col width="60%" />
-								<col width="10%" />
+								<col width="50%" />
+								<col width="20%" />
 								<col width="20%" />
 							</colgroup>
 							<thead>

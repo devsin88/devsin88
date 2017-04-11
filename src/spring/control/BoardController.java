@@ -60,7 +60,7 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/subtitle.sin")
-	public ModelAndView subTitle(int menu_no, int sub_no, String start) throws Exception{
+	public ModelAndView subTitle(int menu_no, int sub_no) throws Exception{
 		
 		// 최초 접속시 메뉴 읽어오기
 		if(session.getAttribute("menu") == null){
@@ -70,8 +70,7 @@ public class BoardController {
 		session.setAttribute("sub_no", sub_no);
 		
 		ModelAndView mv = new ModelAndView();
-		
-		mv.addObject("start", start==null?0:start);
+
 		mv.addObject("menu_no", menu_no);
 		mv.addObject("sub_no", sub_no);
 		
@@ -81,7 +80,7 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/boardview.sin")
-	public ModelAndView boardView(int menu_no, int sub_no, int board_no, String start) throws Exception{
+	public ModelAndView boardView(int menu_no, int sub_no, int board_no) throws Exception{
 		
 		// 최초 접속시 메뉴 읽어오기
 		if(session.getAttribute("menu") == null){
@@ -92,11 +91,11 @@ public class BoardController {
 		
 		ModelAndView mv = new ModelAndView();
 		
-		mv.addObject("start", start==null?0:start);
+		mv.addObject("vo", boardDao.getView(board_no));
 		mv.addObject("menu_no", menu_no);
 		mv.addObject("sub_no", sub_no);
 		
-		mv.setViewName("/board/board-list");
+		mv.setViewName("/board/board-view");
 		
 		return mv;
 	}
