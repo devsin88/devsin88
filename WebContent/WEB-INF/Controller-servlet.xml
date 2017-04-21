@@ -11,6 +11,7 @@ http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<context:annotation-config/>
+	<mvc:annotation-driven/>
 
 	<!-- 이메일 관련 < 추가 예정 > -->
 	
@@ -22,8 +23,14 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 		<property name="maxUploadSize" value="-1"/>
 	</bean>
 	
+	<!-- 파일 다운로드 -->
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
+		<property name="order" value="0"/>
+	</bean>
+	
 	<!-- view Resolver선언 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="order" value="1"/>
 		<property name="prefix" value="/WEB-INF/jsp"/>
 		<property name="suffix" value=".jsp"/>
 	</bean>

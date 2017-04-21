@@ -3,7 +3,8 @@ package mybatis.vo;
 import java.io.Serializable;
 
 public class SubMenuVO implements Serializable {
-	
+
+	private static final long serialVersionUID = 1L;
 	private int sub_no, menu_no;
 	private String sub_title;
 	

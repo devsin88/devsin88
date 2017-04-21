@@ -5,6 +5,7 @@ import java.util.List;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import mybatis.vo.LanguageVO;
 import mybatis.vo.MenuVO;
 
 public class MenuDAO {
@@ -22,6 +23,18 @@ public class MenuDAO {
 
 		if (list != null && list.size() > 0) {
 			ar = new MenuVO[list.size()];
+			list.toArray(ar);
+		}
+		
+		return ar;
+	}
+	
+	public LanguageVO[] getLanguage() {
+		List<LanguageVO> list = template.selectList("menu.selectLanguage");
+		LanguageVO[] ar = null;
+
+		if (list != null && list.size() > 0) {
+			ar = new LanguageVO[list.size()];
 			list.toArray(ar);
 		}
 		

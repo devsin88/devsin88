@@ -96,10 +96,6 @@
 						<div id="logo" class="logo">
 							<a href="index.sin"><img id="logo_img" src="assets/images/logo_cool_green.png" alt="The Project"></a>
 						</div>
-
-						<div style="text-align: center;">
-							<h1>  미완성..작업 진행중... </h1>
-						</div>
 						
 					</div>
 					<!-- header-first end -->
@@ -164,7 +160,12 @@
 													
 													<c:forEach var="svo" items="${mvo.sm_list }">
 														<li>
-															<a href="subtitle.sin?menu_no=${mvo.menu_no }&sub_no=${svo.sub_no }">${svo.sub_title } </a>
+															<c:if test="${mvo.menu_title != 'portfolio' }">
+																<a href="subtitle.sin?menu_no=${mvo.menu_no }&sub_no=${svo.sub_no }">${svo.sub_title } </a>
+															</c:if>
+															<c:if test="${mvo.menu_title == 'portfolio' }">
+																<a href="portfolio.sin?sub_no=${svo.sub_no }">${svo.sub_title } </a>
+															</c:if>
 															<!-- 
 															<ul class="dropdown-menu">
 																<li ><a href="features-headers-default.html">Default/Semi-Transparent</a></li>

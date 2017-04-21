@@ -1,8 +1,19 @@
 package mybatis.vo;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class BoardVO {
 	private int board_no, sub_no;
 	private String mem_id, board_contents, board_fname_ori, board_fname_svr, board_date, board_title;
+	
+	private MultipartFile file;
+	
+	public MultipartFile getFile() {
+		return file;
+	}
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
 	public String getBoard_title() {
 		return board_title;
 	}

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import mybatis.dao.MemberDAO;
-import mybatis.dao.MenuDAO;
 import mybatis.vo.MemberVO;
 import spring.util.EncryptUtil;
 

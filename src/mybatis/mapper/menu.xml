@@ -24,4 +24,9 @@
 		where menu_no = #{menu_no}
 	</select>
 	
+	<!-- language List 가져오기 -->
+	<select id="selectLanguage" resultType="mybatis.vo.LanguageVO">
+		select * from language_t
+	</select>
+	
 </mapper>

@@ -121,6 +121,10 @@
 			    });
 			});
 			
+			function writeBoard(){
+				$('#writeForm').submit();
+			}
+			
 		</script>
 	</head>
 
@@ -168,6 +172,16 @@
 									<th>작성일</th>
 								</tr>
 							</thead>
+							
+							<c:if test="${login != null }">
+								<tfoot>
+									<tr>
+										<td colspan="4" style="text-align: right">
+											<a class="btn btn-success btn-sm" onClick="writeBoard()">Write</a>
+										</td>
+									</tr>
+								</tfoot>
+							</c:if>
 
 						</table>
 						<!-- main end -->
@@ -183,6 +197,11 @@
 			
 		</div>
 		<!-- page-wrapper end -->
+		
+		<form action="boardWrite.sin" method="get" id="writeForm">
+			<input type="hidden" id="sub_no" name="sub_no" value="${sub_no }"/>
+			<input type="hidden" id="menu_no" name="menu_no" value="${menu_no }"/>
+		</form>
 
 		<!-- JavaScript files placed at the end of the document so the pages load faster -->
 		<!-- ================================================== -->

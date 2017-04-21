@@ -6,20 +6,74 @@
   
 <mapper namespace="board">
 
+	<resultMap type="mybatis.vo.BoardVO" id="board_comment">
+		<id column="board_no" property="board_no"/>
+		<collection property="commentVO" ofType="mybatis.vo.CommentVO" select="selectComment" column="board_no"/>
+	</resultMap>
+
 	<!-- 게시판 조회 -->
 	<select id="select" resultType="mybatis.vo.BoardVO" parameterType="Map">
 		select res.*
 		from (select @RN := @RN + 1 as RN, a.*
 			  from (select * FROM board_t
-			  		where sub_no=#{sub_no}
+			  		where state_no=1
+			  		and sub_no=#{sub_no}
 			  		order by board_no desc) a, (select @RN := 0) R) res
 		where RN between #{begin} and #{end}
 	</select>
+	
+	<!-- 게시글 작성 -->
+	<insert id="addBoard" parameterType="mybatis.vo.BoardVO">
+		insert into board_t(board_no, sub_no, mem_id, board_title, board_contents, board_fname_ori, board_fname_svr )
+		values(nextval('seq_board'), #{sub_no}, #{mem_id}, #{board_title}, #{board_contents}, #{board_fname_ori}, #{board_fname_svr} )
+	</insert>
+	
+	<!-- 게시글 삭제 -->
+	<update id="delBoard" parameterType="int">
+		update board_t
+		set state_no = 2
+		where board_no = #{board_no}
+	</update>
+	
+	<!-- 게시글 수정 -->
+	<update id="updateBoard" parameterType="mybatis.vo.BoardVO">
+		update board_t
+		set board_title = #{board_title},
+		board_contents = #{board_contents},
+		board_fname_ori = #{board_fname_ori},
+		board_fname_svr = #{board_fname_svr},
+		board_date = sysdate()
+		where board_no = #{board_no}
+	</update>
+	
+	
+	<!-- 댓글 조회 -->
+	<select id="selectComment" resultType="mybatis.vo.CommentVO" parameterType="int">
+		select * 
+		from comment_t
+		where board_no = #{board_no}
+		and state_no = 1
+		order by comment_no desc
+	</select>
+	
+	<!-- 댓글 작성 -->
+	<insert id="addComment" parameterType="mybatis.vo.CommentVO">
+		insert into comment_t(comment_no, comment_contents, mem_id, board_no)
+		values(nextval('seq_comment'), #{comment_contents}, #{mem_id}, #{board_no})
+	</insert>
+	
+	<!-- 댓글 삭제 -->
+	<update id="delComment" parameterType="int">
+		update comment_t
+		set state_no = 2
+		where comment_no = #{comment_no}
+	</update>
 	
 	<!-- 총 게시물 조회 -->
 	<select id="count" resultType="int" parameterType="int">
 		select count(*) FROM board_t
 		where sub_no=#{sub_no}
+		and state_no = 1
 	</select>
 	
 	<!-- 게시글 조회 -->

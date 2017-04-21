@@ -93,7 +93,12 @@
 												<h2 class="title">${svo.sub_title }</h2>
 											</div>
 											<div class="col-sm-4 text-center">
-												<a href="subtitle.sin?menu_no=${mvo.menu_no }&sub_no=${svo.sub_no }" class="btn btn-lg btn-default btn-animated">Learn More<i class="fa fa-arrow-right pl-20"></i></a>
+												<c:if test="${mvo.menu_title != 'portfolio' }">
+													<a href="subtitle.sin?menu_no=${mvo.menu_no }&sub_no=${svo.sub_no }" class="btn btn-lg btn-default btn-animated">Learn More<i class="fa fa-arrow-right pl-20"></i></a>
+												</c:if>
+												<c:if test="${mvo.menu_title == 'portfolio' }">
+													<a href="portfolio.sin?sub_no=${svo.sub_no }" class="btn btn-lg btn-default btn-animated">Show Portfolio<i class="fa fa-arrow-right pl-20"></i></a>
+												</c:if>
 											</div>
 										</div>
 									</div>

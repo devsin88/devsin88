@@ -5,6 +5,7 @@ import java.util.List;
 
 public class MenuVO implements Serializable{
 
+	private static final long serialVersionUID = 1L;
 	private int menu_no;
 	private String menu_title;
 	
